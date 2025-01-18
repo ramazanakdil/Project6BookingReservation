@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_BookingLayout.cshtml";
+}
+
+<section class="hero-section" style="background-image:url(~/sona-master/img/hero/hero-1.jpg)">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="hero-text">
+                    <h1>Rüya Gibi Bir Konaklama Sizi Bekliyor</h1>
+                    <p>
+                        Dünyanın dört bir yanındaki otelleri kolayca keşfedin, bütçenize uygun en iyi fırsatları yakalayın!
+                        OtelBul ile hızlı, kolay ve güvenilir bir şekilde arama yaparak size en uygun oteli seçin ve unutulmaz bir deneyim yaşayın
+                    </p>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-5 offset-xl-2 offset-lg-1">
+                <div class="booking-form">
+                    <h3>Otel Ara</h3>
+                    <form asp-action="Search" method="post" onsubmit="showLoadingOverlay()">
+                        <div class="select-option">
+                            <label for="query">Şehir:</label>
+                            <input type="text" class="form-control" id="query" name="query" placeholder="Şehir Adı Giriniz" required />
+                        </div>
+                        <div class="check-date">
+                            <label for="checkinDate">Giriş Tarihi:</label>
+                            <input type="text" class="date-input" id="checkinDate" name="checkinDate" placeholder="gg.aa.yyyy" required>
+                            <i class="icon_calendar"></i>
+                        </div>
+                        <div class="check-date">
+                            <label for="checkoutDate">Çıkış Tarihi:</label>
+                            <input type="text" class="date-input" id="checkoutDate" name="checkoutDate" placeholder="gg.aa.yyyy" required>
+                            <i class="icon_calendar"></i>
+                        </div>
+                        <div class="select-option">
+                            <label for="adults">Yetişkin:</label>
+                            <input type="number" class="form-control" id="adults" name="adults" min="1" max="30" placeholder="Yetişkin Sayısı" required />
+                        </div>
+                        <div class="select-option">
+                            <label for="children">Çocuk:</label>
+                            <input type="number" class="form-control" id="children" name="children" min="0" max="30" placeholder="Çocuk Sayısı" required />
+                        </div>
+                        <button type="submit">Otel Ara</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-slider owl-carousel">
+        <div class="hs-item set-bg" data-setbg="/sona-master/img/hero/hero-1.jpg"></div>
+        <div class="hs-item set-bg" data-setbg="/sona-master/img/hero/hero-2.jpg"></div>
+        <div class="hs-item set-bg" data-setbg="/sona-master/img/hero/hero-3.jpg"></div>
+    </div>
+</section>
+
+

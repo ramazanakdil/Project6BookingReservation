@@ -1,0 +1,33 @@
+﻿@model List<HotelViewModel>
+@{
+    ViewData["Title"] = "Results";
+    Layout = "~/Views/Shared/_BookingLayout.cshtml";
+}
+
+<section class="rooms-section spad">
+    <div class="container">
+        <div class="row">
+            @foreach (var hotel in Model)
+            {
+                <div class="col-lg-4 col-md-6">
+                    <div class="room-item">
+                        <img src="@hotel.PhotoUrl" alt="@hotel.Name" style="height:300px; width:auto; object-fit:cover">
+                        <div class="ri-text">
+                            <h4>@hotel.Name</h4>
+                            <h3>@hotel.ReviewScore<span> /10 </span></h3>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>@hotel.ReviewCount kişi tarafından değerlendirildi.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <a href="#" class="primary-btn">Rezervasyon Yap</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
