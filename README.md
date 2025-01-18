@@ -7,7 +7,7 @@ Bu projede, modern yazılım teknolojilerini ve mimarilerini kullanarak hem öğ
 
 ## 🛠️ Kullanılan Teknolojiler ve Araçlar
 
--** .NET **
+-.NET
 -**Rapid API**
 -**C#**
 -**Bootstrap 5**
